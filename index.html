@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <p class="img">
+
+
+        <div class="container">
+
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'am <span>Pratiksha</span><br> From Solapur</h1>
+            </div>
+        </div>
+        </p>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="bg1.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo voluptates adipisci eos nam
+                        quidem provident iusto ipsam, dignissimos eius molestiae modi veritatis sint accusantium cum
+                        optio dolor eveniet ipsum necessitatibus!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links" class="active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Desiging Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Developmentli>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>10 standerd<br><span>2020</span><br>Tadawale</li>
+                            <li>12 standerd<br><span>2022</span><br>From Barshi</li>
+                            <li>B.Tech<br><span>2026</span><br>From Solapur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis animi quae temporibus, ea officiis
+                        placeat eveniet consectetur molestias inventore autem?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis animi quae temporibus, ea officiis
+                        placeat eveniet consectetur molestias inventore autem?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Python Programmer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis animi quae temporibus, ea officiis
+                        placeat eveniet consectetur molestias inventore autem?</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+
+    <!-- Contact Section -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>pratikshaaware2004@gmail.com</p>
+                    <p>8767294480</p>
+                </div>
+                <a href="img3.jpeg" download class="btn btn2">Downlod CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="email" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright Pratiksha. Made with by Easy Tutorials</p>
+    </div>
+    </div>
+
+
+
+    <!-- javaSCript Code -->
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
